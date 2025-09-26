@@ -1,0 +1,15 @@
+{
+  "name": "zen-snake",
+  "version": "1.0.0",
+  "description": "A blockchain-based snake game on ZenChain Testnet with enhanced UI",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server -p 8080"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "http-server": "^14.1.1"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen-Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background-image">
+    <header>
+        <h1>Zen-Snake</h1>
+        <div class="nav-links">
+            <a href="https://faucet.zenchain.io" target="_blank" class="faucet-btn">Faucet</a>
+            <button id="addNetwork" class="game-btn">Add Network</button>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Welcome to Zen-Snake</h2>
+        <button id="connectWallet" class="btn">Connect Wallet</button>
+        <p id="walletAddress">Wallet: Not connected</p>
+        <button id="startGame" class="btn" disabled>Start Game</button>
+        <h3>Total Games: <span id="totalGames">0</span></h3>
+        <h3>Recent Players:</h3>
+        <ul id="playersList" class="players-list"></ul>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="https://x.com/Fetzima_2007" target="_blank">X</a>
+            <a href="https://github.com/Fetzima" target="_blank">GitHub</a>
+        </div>
+    </footer>
+    <script src="node_modules/ethers/dist/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

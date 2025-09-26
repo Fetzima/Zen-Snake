@@ -1,0 +1,212 @@
+:root {
+    --background-image-url: url('images/ZenChain.png');
+}
+
+body {
+    background-image: var(--background-image-url);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #b4ff39;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+    transition: background-image 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-image {
+}
+
+header {
+    background: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.faucet-btn, .game-btn {
+    background-color: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    color: #b4ff39;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faucet-btn:hover, .game-btn:hover {
+    transform: translateY(-3px);
+    background-color: rgba(26, 60, 52, 0.7);
+    box-shadow: 0 4px 10px rgba(180, 255, 57, 0.5);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.8s ease-out;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.btn {
+    background: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    color: #b4ff39;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(180, 255, 57, 0.5);
+    background: rgba(26, 60, 52, 0.7);
+}
+
+.btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+canvas {
+    border: 3px solid #b4ff39;
+    background-color: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+canvas:hover {
+    transform: scale(1.02);
+}
+
+.players-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.players-list li {
+    background: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: slideIn 0.5s ease;
+}
+
+.players-list li:hover {
+    transform: translateX(10px);
+    background: rgba(26, 60, 52, 0.7);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    canvas {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+footer {
+    background: rgba(26, 60, 52, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+    border-top: 2px solid #2a5d4e;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.footer-links a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
